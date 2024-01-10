@@ -13,6 +13,7 @@ const corsOptions = {
   origin: [
     "http://localhost:3000",
     "https://rainbow-sfogliatella-f84033.netlify.app",
+    "https://master--rainbow-sfogliatella-f84033.netlify.app",
   ],
   credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
