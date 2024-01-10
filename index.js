@@ -10,7 +10,10 @@ const app = express();
 app.use(express.json());
 app.use(express.static("./"));
 const corsOptions = {
-  origin: ["http://localhost:3000"],
+  origin: [
+    "http://localhost:3000",
+    "https://rainbow-sfogliatella-f84033.netlify.app",
+  ],
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
 app.use(cors(corsOptions));
