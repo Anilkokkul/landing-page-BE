@@ -14,6 +14,7 @@ const corsOptions = {
     "http://localhost:3000",
     "https://rainbow-sfogliatella-f84033.netlify.app",
   ],
+  credentials: true,
   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
 };
 app.use(cors(corsOptions));
