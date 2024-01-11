@@ -1,12 +1,15 @@
 const Logos = require("../Models/logo.model");
 const Users = require("../Models/user.model");
+const { uploadFile } = require("../helpers/cloudinary");
 
 exports.uploadLogo = async (req, res) => {
-  console.log(req.file); // logged file info
+  //   console.log(req.file); // logged file info
   try {
+    const upload = await uploadFile(req.file.path);
+    // console.log("URL", upload.url);
     await Logos.findByIdAndUpdate(
       { _id: "659e6ef8ae46052d68a3cb41" },
-      { logo: req.file.filename },
+      { logo: upload.secure_url },
       {
         new: true,
       }
